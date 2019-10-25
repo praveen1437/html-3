@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+table, th, td {
+
+  border: 1px solid black;
+   border-collapse: collapse;
+
+</style>
+</head>
+<body>
+<div>
+<table style="width:100%">
+    <tr>
+        <th >Name</th>
+        <th>Designation</th>
+        <th>Dept</th>
+    </tr>
+    <tr id="sur">
+        <td id onclick="display('sur')"> Suresh </td>
+        <td>Java Developer</td>
+        <td>It</td>
+    </tr>
+    <tr></tr>
+    <tr id="eve">
+        <td onclick="display('eve')">Eve</td>
+        <td>Customer support</td>
+        <td>Non-It</td>
+    </tr>
+
+</table>
+
+</div>
+
+    <p id="pas" align="center"> </p>
+
+
+
+
+ <script type="text/javascript">
+function display(i){
+            console.log(i);
+// check this one
+       var row = document.getElementById(i);
+       var cells= row.getElementsByTagName("td");
+
+document.getElementById("pas").innerHTML="My name is"+ (cells[0].innerText)+ " am working as "+ cells[1].innerText;
+console.log(cells[0]);
+console.log(i)
+   }
+ </script>
+<!--<script src="https://www.w3schools.com/lib/w3.js"></script>-->
+
+
+</body>
+
+</html>
